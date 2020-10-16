@@ -3,16 +3,16 @@ import os
 import numpy as np
 import faceRecongnition as fr
 
-test_img= cv2.imread('C:\\Users\\DANIA NIAZI\\Desktop\\GIT_PROJECTS\\OpenCV\\Face Recongnition\\testImages\\testEgin.jpg')
+test_img= cv2.imread('C:\\Users\\DANIA NIAZI\\Desktop\\GIT_PROJECTS\\OpenCV\\Face Recongnition\\testImages\\face11.jpg')
 faces_detected,gray_img=fr.faceDetection(test_img)
 print("face_dtected:", faces_detected)
 
 #calling the label for training data
-#faces,faceIDLabels = fr.labels_for_training_data('C:\\Users\\DANIA NIAZI\\Desktop\\GIT_PROJECTS\\OpenCV\\Face Recongnition\\trainingData')
+# faces,faceIDLabels = fr.labels_for_training_data('C:\\Users\\DANIA NIAZI\\Desktop\\GIT_PROJECTS\\OpenCV\\Face Recongnition\\trainingData')
 #TRAINING CLASSIFIER
-#face_recognizer=fr.train_classifier(faces,faceIDLabels)
+# face_recognizer=fr.train_classifier(faces,faceIDLabels)
 #Save classifer
-#face_recognizer.save('TrainingData.yml' )
+# face_recognizer.save('TrainingData.yml' )
 
 face_recognizer=cv2.face.LBPHFaceRecognizer_create()
 face_recognizer.read('C:\\Users\\DANIA NIAZI\\Desktop\\GIT_PROJECTS\\OpenCV\\Face Recongnition\\TrainingData.yml')
@@ -42,7 +42,7 @@ for face in faces_detected: #taking the first face which is detected
 resized_img= cv2.resize(test_img,(800,700))
 cv2.imshow('Face Detection' , resized_img);
 cv2.waitKey(0)
-cv2.destroyAllWidows
+cv2.destroyAllWindows()
 
 
 

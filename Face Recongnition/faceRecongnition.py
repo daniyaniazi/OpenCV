@@ -63,7 +63,7 @@ def draw_rect(test_img,face):
 #adding text lablel on image'
     
 def put_text(test_img,text,x,y):
-    cv2.putText(test_img,text,(x-60,y+120),cv2.FONT_HERSHEY_COMPLEX,1,(255,0,0),1)
+    cv2.putText(test_img,text,(x-50,y+120),cv2.FONT_HERSHEY_COMPLEX,1,(255,0,0),1)
     
 
 
