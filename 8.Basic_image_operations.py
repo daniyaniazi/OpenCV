@@ -8,10 +8,12 @@ print(img.dtype)#return image datatype
 b,g,r=cv2.split(img)
 img= cv2.merge((b,g,r))
 cv2.imshow("image",img)
-
+# Resizing an image
+imgResized=cv2.resize(img,(300,200))
 
 #roi= region of interest
 #area of an image you want to work with
+# Cropping img[height,width]
 area=img[123:240, 188:280]
 print(area.shape)
 img[5:122, 302:394]=area
@@ -21,7 +23,7 @@ img[5:122, 302:394]=area
 #dimesions should be excact
 paste=img[5:122, 302:394]
 print(paste.shape)
-
+cv2.imshow("Resized image",imgResized)
 cv2.imshow("image",img)
 cv2.waitKey(0)
 cv2.destroyAllWindows()
