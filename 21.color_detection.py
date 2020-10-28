@@ -29,9 +29,9 @@ while True:
     upper=np.array([h_max,s_max,v_max])
     mask=cv2.inRange(imgHSV,lower,upper)
     imgRes=cv2.bitwise_and(img,img,mask=mask)
-    # cv2.imshow("original", img)
-    # cv2.imshow("mask", mask)
-    # cv2.imshow("res", imgRes)
+    cv2.imshow("original", img)
+    cv2.imshow("mask", mask)
+    cv2.imshow("res", imgRes)
     key = cv2.waitKey(1)
     if key == 27:
         break
